@@ -16,12 +16,14 @@ img{vertical-align:top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 /*--------------------*/
 .wrapper{
+    
 	min-height: 100%;
 	overflow: hidden;
-
+    max-height: 669px;
 	display: flex;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
+
 }
 .content{
 	flex: 1 1 auto;
@@ -30,7 +32,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 .home__conteiner {
 	max-width: 1170px;
     margin: 0 auto;
-    padding: 0 15px;
+    /* padding: 0 15px; */
     
     
 }
@@ -51,6 +53,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 }
 .home__phone {
     margin-top: 30px;
+    margin-right: 30px;
 }
 .home__phone a {
     text-decoration: none;
@@ -124,18 +127,20 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 }
 .subtitle__scroll {
     float: right;
-    margin-right: 4%;
+    margin-right: 7%;
     transition: all 0.3s ease 0s;
 }
 .home__lateralmen {
-    /* margin-bottom: 10px; */
-    bottom: -1000px;
+    /* display: none; */
+    margin-bottom: 20px;
+    top: -1000px;
+    
     position: relative;
     transition: all 0.3s ease 0s;
 }
 .home__button {
-    background: #b60107;
-    margin-top: 20px;
+    background: linear-gradient(to top, #d00006, #a50207);
+    margin-top: 15px;
     max-width: 365px;
     padding: 25px 0; 
     text-align: center;
@@ -151,6 +156,12 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
     color: #ffffff;
     padding-top: 25px;
 
+}
+.fig {
+    max-width: 30px;
+    max-height: 16px;
+    margin-left: 28%;
+    border: 20px solid transparent; border-bottom: 20px solid  #4a4a4a;
 }
 .footer {
     font-family: 'Montserrat', sans-serif;
