@@ -4,24 +4,17 @@ const homeTitle = document.querySelector('.home__title'),
 
 
 
-let last_known_scroll_position = 0;
-let ticking = false;
+window.addEventListener('scroll', function() {
+    let showScrol = pageYOffset;
+    
 
-function doSomething(scroll_pos) {
-    homeTitle.classList.add('title__scroll');
-    homeSubtitle.classList.add('subtitle__scroll');
-    homeLateralmen.style.bottom = 0;
-}
-
-window.addEventListener('scroll', function(e) {
-    last_known_scroll_position = window.scrollY;
-
-    if (!ticking) {
-    window.requestAnimationFrame(function() {
-        doSomething(last_known_scroll_position);
-        ticking = false;
-    });
-
-    ticking = true;
+    if (showScrol > 10) {
+        homeTitle.classList.add('title__scroll');
+        homeSubtitle.classList.add('subtitle__scroll');
+        homeLateralmen.style.top = 0;
+    }else if (showScrol == 0){
+        homeTitle.classList.remove('title__scroll');
+        homeSubtitle.classList.remove('subtitle__scroll');
+        homeLateralmen.style.top = -1000 + 'px';
     }
 });
